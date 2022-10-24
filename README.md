@@ -171,8 +171,8 @@ ASSET_PREFIX=<SetToAUniquePrefixBetween6and12characters>
 NAME_OF_WEST_STORAGE_ACCOUNT=${ASSET_PREFIX}stwestus3
 NAME_OF_EAST_STORAGE_ACCOUNT=${ASSET_PREFIX}steastus
 
-az storage blob copy start --account-name $NAME_OF_WEST_STORAGE_ACCOUNT --destination-blob index.html --auth-mode login --destination-container web --source-uri https://raw.githubusercontent.com/RobBagby/network-secure-ingress-sample/main/sample-websites/west/index.html
-az storage blob copy start --account-name $NAME_OF_EAST_STORAGE_ACCOUNT --destination-blob index.html --auth-mode login --destination-container web --source-uri https://raw.githubusercontent.com/RobBagby/network-secure-ingress-sample/main/sample-websites/east/index.html
+az storage blob copy start --account-name $NAME_OF_WEST_STORAGE_ACCOUNT --destination-blob index.html --auth-mode login --destination-container web --source-uri https://raw.githubusercontent.com/Azure-Samples/frontdoor-bicep-network-secure-global-ingress/main/sample-websites/west/index.html
+az storage blob copy start --account-name $NAME_OF_EAST_STORAGE_ACCOUNT --destination-blob index.html --auth-mode login --destination-container web --source-uri https://raw.githubusercontent.com/Azure-Samples/frontdoor-bicep-network-secure-global-ingress/main/sample-websites/east/index.html
 ```
 
 Use the following commands to validate that the web pages were copied to the storage accounts:
